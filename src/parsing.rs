@@ -13,3 +13,15 @@ pub fn parse_numbers(path: &str) -> Vec<i32> {
         .collect();
     input
 }
+
+pub fn parse_to_strings(path: &str) -> Vec<String> {
+    let file = File::open(path)
+        .expect("File not found");
+
+    let reader = BufReader::new(file);
+
+    reader
+        .lines()
+        .map(|line| line.unwrap().to_string())
+        .collect()
+}

@@ -37,5 +37,25 @@ mod day2 {
 
         assert_eq!(13071, day2::part2(input));
     }
-
 }
+
+#[cfg(test)]
+mod day3 {
+    use aoc2022::day3;
+    use aoc2022::parsing::parse_to_strings;
+
+    #[test]
+    fn part1() {
+        let input = parse_to_strings("data/day3.txt");
+
+        assert_eq!(8252, day3::part1(input));
+    }
+
+    #[test]
+    fn part2() {
+        let input = parse_to_strings("data/day3.txt");
+
+        assert_eq!(2828, day3::part2(input));
+    }
+}
+
