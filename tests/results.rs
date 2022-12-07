@@ -59,3 +59,24 @@ mod day3 {
     }
 }
 
+#[cfg(test)]
+mod day4 {
+    use aoc2022::day4;
+    use aoc2022::parsing::parse_to_strings;
+
+    #[test]
+    fn part1() {
+        let input = parse_to_strings("data/day4.txt");
+
+        assert_eq!(526, day4::part1(input));
+    }
+
+    #[test]
+    fn part2() {
+        let input = parse_to_strings("data/day4.txt");
+
+        assert_eq!(886, day4::part2(input));
+    }
+
+}
+

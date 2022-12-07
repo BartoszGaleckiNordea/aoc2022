@@ -71,7 +71,7 @@ fn find_duplicates(s: &String) -> Option<char> {
 
 #[cfg(test)]
 mod tests {
-    use crate::day3::{find_duplicates, part1, part2};
+    use crate::day3::{part1, part2};
 
     static EXAMPLE_INPUT: &str = "vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
