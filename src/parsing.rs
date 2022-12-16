@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::{BufRead, BufReader};
+use std::io::{BufRead, BufReader, Read};
 
 pub fn parse_numbers(path: &str) -> Vec<i32> {
     let file = File::open(path)
@@ -24,4 +24,14 @@ pub fn parse_to_strings(path: &str) -> Vec<String> {
         .lines()
         .map(|line| line.unwrap().to_string())
         .collect()
+}
+
+pub fn parse_to_string(path: &str) -> String {
+    let mut file = File::open(path)
+        .expect("File not found");
+
+    let mut output = String::new();
+    file.read_to_string(&mut output);
+
+    output
 }
